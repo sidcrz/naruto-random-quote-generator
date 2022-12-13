@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> NARUTO QUOTE GENERATOR </title>
+    <style>
+        
+
+
+     body {
+        background-image: url("naruto.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-color: #cccccc;
+        
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align: center;
+        padding: 50px;
+        
+      }
+      
+
+      #message {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(184, 43, 43);
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="message">Click the button to get a random quote!</h1>
+    <button onclick="generateQuote()">Get Quote</button>
+    <script>
+      
+      const quotes = [
+        "A journey of a thousand miles begins with a single step.",
+        "Believe you can and you're halfway there.",
+        "Don't watch the clock; do what it does. Keep going.",
+        "The only limit to our realization of tomorrow will be our doubts of today.",
+        "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+ ];
+
+      function generateQuote() {
+        let kl='"';
+        const quoteIndex = Math.floor(Math.random() * quotes.length);
+        const quote = kl+quotes[quoteIndex]+kl;
+        document.getElementById("message").innerHTML = quote;
+      }
+    </script>
+  </body>
+</html>
